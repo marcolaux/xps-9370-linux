@@ -1,0 +1,11 @@
+[Unit]
+Description=9370BOOT: apply boot setttings . . .
+Before=graphical.target multi-user.target
+
+[Service]
+User=root
+Type=simple
+ExecStart=/usr/sbin/disable_wakeup.sh
+
+[Install]
+WantedBy=graphical.target multi-user.target
