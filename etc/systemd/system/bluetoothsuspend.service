@@ -1,0 +1,11 @@
+[Unit]
+Description=XPS 9370: disable Bluetooth
+Before=suspend.target hibernate.target hybrid-sleep.target
+
+[Service]
+User=root
+Type=simple
+ExecStart=/sbin/bluetoothsuspend
+
+[Install]
+WantedBy=suspend.target hibernate.target hybrid-sleep.target

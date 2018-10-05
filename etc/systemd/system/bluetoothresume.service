@@ -1,0 +1,11 @@
+[Unit]
+Description=XPS 9370: resume Bluetooth
+After=suspend.target hibernate.target hybrid-sleep.target
+
+[Service]
+User=root
+Type=simple
+ExecStart=/sbin/bluetoothresume
+
+[Install]
+WantedBy=suspend.target hibernate.target hybrid-sleep.target
